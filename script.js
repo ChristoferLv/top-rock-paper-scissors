@@ -19,7 +19,6 @@ let currentRound = 1;
  * @param {MouseEvent} e 
 */
 function choiceHandler(e) {
-    console.log(e.target.tagName)
     if (e.target.tagName != "BUTTON")
         return;
     const humanChoice = e.target.dataset.choice;
