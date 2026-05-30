@@ -29,11 +29,11 @@ function getComputerChoice() {
     const choiceNum = Math.floor(Math.random() * 3) + 1;
     switch (choiceNum) {
         case 1:
-            return "pedra";
+            return "stone";
         case 2:
-            return "papel";
+            return "paper";
         case 3:
-            return "tesoura";
+            return "scissors";
     }
 }
 
@@ -42,11 +42,11 @@ function finishGame() {
     choices.style.pointerEvents = 'none';
     againBtn.style.display = "block";
     if (humanScore > computerScore) {
-        result.innerText = "VOCÊ GANHOU O JOGO!!! Parabéns!!!";
+        result.innerText = "YOU WON!!! Bravo!!!";
     } else if (humanScore < computerScore) {
-        result.innerText = "Não foi dessa vez, o computador te superou, tente de novo!";
+        result.innerText = "Not this time, the computer outsmarted you, try again!";
     } else {
-        result.innerText = "Vocês empataram, devem estar conectados mentalmente.";
+        result.innerText = "You tied, must be mentally connected.";
     }
 }
 
@@ -63,48 +63,48 @@ function restartGame() {
 
 function updateDisplays() {
     roundDisplay.innerText = "Round: " + currentRound;
-    score.innerText = `Pontuação: Você ${humanScore} - ${computerScore} Computador`;
+    score.innerText = `Score: You ${humanScore} - ${computerScore} Computer`;
 }
 
 function playRound(humanChoice, computerChoice) {
     switch (computerChoice) {
-        case "pedra":
-            if (humanChoice == "pedra") {
-                last.innerText = "Esse foi um empate, tente de novo!";
+        case "stone":
+            if (humanChoice == "stone") {
+                last.innerText = "That was a draw. Try again!";
             }
-            if (humanChoice == "papel") {
+            if (humanChoice == "paper") {
                 humanScore = humanScore + 1;
-                last.innerText = "Você ganhou esse round!";
+                last.innerText = "You won this round!";
             }
-            if (humanChoice == "tesoura") {
+            if (humanChoice == "scissors") {
                 computerScore = computerScore + 1;
-                last.innerText = "Aqui o computador ganhou, ele escolheu pedra.";
+                last.innerText = "The computer won this round; it chose rock.";
             }
             break;
-        case "papel":
-            if (humanChoice == "papel") {
-                last.innerText = "Esse foi um empate, tente de novo!";
+        case "paper":
+            if (humanChoice == "paper") {
+                last.innerText = "That was a draw. Try again!";
             }
-            if (humanChoice == "tesoura") {
+            if (humanChoice == "scissors") {
                 humanScore = humanScore + 1;
-                last.innerText = "Você ganhou esse round!";
+                last.innerText = "You won this round!";
             }
-            if (humanChoice == "pedra") {
+            if (humanChoice == "stone") {
                 computerScore = computerScore + 1;
-                last.innerText = "Aqui o computador ganhou, ele escolheu papel.";
+                last.innerText = "The computer won this round; it chose paper.";
             }
             break;
-        case "tesoura":
-            if (humanChoice == "tesoura") {
-                last.innerText = "Esse foi um empate, tente de novo!";
+        case "scissors":
+            if (humanChoice == "scissors") {
+                last.innerText = "That was a draw. Try again!";
             }
-            if (humanChoice == "pedra") {
+            if (humanChoice == "stone") {
                 humanScore = humanScore + 1;
-                last.innerText = "Você ganhou esse round!";
+                last.innerText = "You won this round!";
             }
-            if (humanChoice == "papel") {
+            if (humanChoice == "paper") {
                 computerScore = computerScore + 1;
-                last.innerText = "Aqui o computador ganhou, ele escolheu tesoura.";
+                last.innerText = "The computer won this round; it chose scissors.";
             }
             break;
     }
