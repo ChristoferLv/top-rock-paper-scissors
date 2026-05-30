@@ -70,6 +70,10 @@ Um jogo de Pedra, Papel e Tesoura que evoluiu de uma versão simples no console 
 - JavaScript (ES6)
 - Git (branching e merge workflow)
 
+## Visualization
+
+<img width="1326" height="1020" alt="127 0 0 1_5500_index html" src="https://github.com/user-attachments/assets/75a15779-6885-46cd-9829-0543ec5c4f1b" />
+
 ---
 
 **Projetos desenvolvidos seguindo:**
